@@ -1,0 +1,63 @@
+.date{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom:-20px;
+    margin-right: 14rem;
+  } 
+       
+.headDate{
+   font-size: 3.2vw;
+   margin-left: 12rem;
+   color: blueviolet;
+ }
+
+.calender{
+    margin-left: 25px;
+    margin-top: 15px;
+    height: 40px;
+    border-radius: 5px;
+    padding:  14px;
+    color:black;
+    font-size: 15px;
+    border-width: 0.5px;
+  }
+
+
+
+
+@media (max-width: 768px)  {
+    .date{
+      margin: auto;
+      color: rgb(37, 42, 47);
+    }
+
+   .date p{
+        font-size: 21px;
+        margin-left: 10px;
+        margin-top: 25px;
+    }
+
+    .calender{
+      padding-bottom: 10px;
+    }
+
+  }
+
+  
+@media (max-width: 400px) {
+        .date p{
+          font-size: 14px;
+        }
+
+        .date{
+         margin: auto;
+        }
+
+        .calender{
+          height: 20px;
+          font-size:12px ;
+          margin-top: 1.5rem;
+         }
+
+  } 

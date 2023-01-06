@@ -1,0 +1,35 @@
+.homePage{
+    font-size: xx-large;
+    color: aqua;
+}
+
+.about{
+    font-size: 16px;
+    color: blue;
+}
+
+.downloadbtn{
+    display: flex;
+    justify-content: center;
+}
+
+.playstore, .apple{
+margin:5px;
+padding:5px;
+border-radius: 5px;
+width:150px;
+height: 50px;
+background-color: rgb(255, 255, 255);
+border-width: 1px;
+}
+
+.playstore:hover, .apple:hover{
+    background-color: rgb(219, 85, 7);
+    border: none;
+}
+
+.brandicon{
+    position: relative;
+    padding: 2px;
+    right: 8px;
+}

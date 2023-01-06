@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'http://localhost:9001' });
+const API = axios.create({ baseURL: 'http://192.168.0.34:7001' });
 
 //Request Intercept
 API.interceptors.request.use((req) => {
   if (localStorage.getItem('profile')) {
-    req.headers.Authorization = `Bearer ${JSON.parse(localStorage.getItem('profile')).token}`;
+    req.headers.Authorization = `Bearer ${JSON.parse(localStorage.getItem('profile'))}`;
   }
 
   return req;
@@ -36,4 +36,12 @@ export const assignedTask =(userDetail)=>API.post('/tasks/assignedtask', userDet
 export const assignTask   =(userDetail)=>API.post('/tasks/assigntask', userDetail)
 
 //TOGGLE TASK
-export const toggleTask=(id,status)=>API.put(`/tasks/toggletask/${id}`,status)
+export const toggleTask=(data)=>API.put(`/tasks/toggletask/${data.id}`,data)
+
+//CHANGE TASK
+export const changeTask=(data)=>API.put(`/tasks/todos/${data.id}`,data.text)
+
+
+//FORGET PASSWORD
+export const forgetPassword=(data)=>API.post(`/user/recover`,data)
+export const changePassword=(data)=>API.put(`/user/change`,data)
